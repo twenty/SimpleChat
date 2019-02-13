@@ -2,7 +2,7 @@ import mongoose = require("mongoose");
 let uniqueValidator = require('mongoose-unique-validator');
 let crypto = require("crypto");
 let jwt = require("jsonwebtoken");
-let config = require('../env.json')[process.env.NODE_ENV || 'development'];
+let config = require('../../env.json')[process.env.NODE_ENV || 'development'];
 let secret = config.secret;
 
 let UserSchema = new mongoose.Schema({

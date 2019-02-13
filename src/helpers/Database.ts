@@ -4,7 +4,7 @@
 */
 module.exports.connect = function() {
     let mongoose = require("mongoose");
-    let config = require('../env.json')[process.env.NODE_ENV || 'development'];
+    let config = require('../../env.json')[process.env.NODE_ENV || 'development'];
     try {
         mongoose.connect(config.MONGO_URI);
         return {

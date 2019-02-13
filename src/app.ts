@@ -1,6 +1,6 @@
 import express = require('express');
 let app = express();
-let config = require('./env.json')[process.env.NODE_ENV || 'development'];
+let config = require('../env.json')[process.env.NODE_ENV || 'development'];
 let bodyParser = require("body-parser");
 
 app.set("view engine", "ejs");
